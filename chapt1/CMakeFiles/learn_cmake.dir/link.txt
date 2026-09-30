@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/learn_cmake.dir/main.cpp.o -o learn_cmake 
