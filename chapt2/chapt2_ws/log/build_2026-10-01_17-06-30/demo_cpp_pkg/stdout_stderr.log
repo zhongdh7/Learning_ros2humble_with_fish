@@ -1,0 +1,30 @@
+[ 25%] Built target cpp_node
+[ 37%] [32mBuilding CXX object CMakeFiles/learn_shared_ptr.dir/src/learn_shared_ptr.cpp.o[0m
+[ 62%] Built target person_node
+[ 87%] Built target learn_auto
+[01m[K/home/loser/learning_ros2/chapt2/chapt2_ws/src/demo_cpp_pkg/src/learn_shared_ptr.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/loser/learning_ros2/chapt2/chapt2_ws/src/demo_cpp_pkg/src/learn_shared_ptr.cpp:20:10:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kstr[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+   20 |     auto [01;35m[Kstr[m[K = p1->c_str();
+      |          [01;35m[K^~~[m[K
+[100%] [32m[1mLinking CXX executable learn_shared_ptr[0m
+[100%] Built target learn_shared_ptr
+-- Install configuration: ""
+-- Up-to-date: /home/loser/learning_ros2/chapt2/chapt2_ws/install/demo_cpp_pkg/lib/demo_cpp_pkg/cpp_node
+-- Up-to-date: /home/loser/learning_ros2/chapt2/chapt2_ws/install/demo_cpp_pkg/lib/demo_cpp_pkg/person_node
+-- Up-to-date: /home/loser/learning_ros2/chapt2/chapt2_ws/install/demo_cpp_pkg/lib/demo_cpp_pkg/learn_auto
+-- Installing: /home/loser/learning_ros2/chapt2/chapt2_ws/install/demo_cpp_pkg/lib/demo_cpp_pkg/learn_shared_ptr
+-- Up-to-date: /home/loser/learning_ros2/chapt2/chapt2_ws/install/demo_cpp_pkg/share/ament_index/resource_index/package_run_dependencies/demo_cpp_pkg
+-- Up-to-date: /home/loser/learning_ros2/chapt2/chapt2_ws/install/demo_cpp_pkg/share/ament_index/resource_index/parent_prefix_path/demo_cpp_pkg
+-- Up-to-date: /home/loser/learning_ros2/chapt2/chapt2_ws/install/demo_cpp_pkg/share/demo_cpp_pkg/environment/ament_prefix_path.sh
+-- Up-to-date: /home/loser/learning_ros2/chapt2/chapt2_ws/install/demo_cpp_pkg/share/demo_cpp_pkg/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/loser/learning_ros2/chapt2/chapt2_ws/install/demo_cpp_pkg/share/demo_cpp_pkg/environment/path.sh
+-- Up-to-date: /home/loser/learning_ros2/chapt2/chapt2_ws/install/demo_cpp_pkg/share/demo_cpp_pkg/environment/path.dsv
+-- Up-to-date: /home/loser/learning_ros2/chapt2/chapt2_ws/install/demo_cpp_pkg/share/demo_cpp_pkg/local_setup.bash
+-- Up-to-date: /home/loser/learning_ros2/chapt2/chapt2_ws/install/demo_cpp_pkg/share/demo_cpp_pkg/local_setup.sh
+-- Up-to-date: /home/loser/learning_ros2/chapt2/chapt2_ws/install/demo_cpp_pkg/share/demo_cpp_pkg/local_setup.zsh
+-- Up-to-date: /home/loser/learning_ros2/chapt2/chapt2_ws/install/demo_cpp_pkg/share/demo_cpp_pkg/local_setup.dsv
+-- Installing: /home/loser/learning_ros2/chapt2/chapt2_ws/install/demo_cpp_pkg/share/demo_cpp_pkg/package.dsv
+-- Up-to-date: /home/loser/learning_ros2/chapt2/chapt2_ws/install/demo_cpp_pkg/share/ament_index/resource_index/packages/demo_cpp_pkg
+-- Up-to-date: /home/loser/learning_ros2/chapt2/chapt2_ws/install/demo_cpp_pkg/share/demo_cpp_pkg/cmake/demo_cpp_pkgConfig.cmake
+-- Up-to-date: /home/loser/learning_ros2/chapt2/chapt2_ws/install/demo_cpp_pkg/share/demo_cpp_pkg/cmake/demo_cpp_pkgConfig-version.cmake
+-- Up-to-date: /home/loser/learning_ros2/chapt2/chapt2_ws/install/demo_cpp_pkg/share/demo_cpp_pkg/package.xml
