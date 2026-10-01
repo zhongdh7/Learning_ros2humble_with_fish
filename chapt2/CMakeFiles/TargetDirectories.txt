@@ -1,6 +1,0 @@
-/home/loser/learning_ros2/chapt2/CMakeFiles/ros2_cpp_node.dir
-/home/loser/learning_ros2/chapt2/CMakeFiles/uninstall.dir
-/home/loser/learning_ros2/chapt2/CMakeFiles/ros2_cpp_uninstall.dir
-/home/loser/learning_ros2/chapt2/CMakeFiles/test.dir
-/home/loser/learning_ros2/chapt2/CMakeFiles/edit_cache.dir
-/home/loser/learning_ros2/chapt2/CMakeFiles/rebuild_cache.dir
