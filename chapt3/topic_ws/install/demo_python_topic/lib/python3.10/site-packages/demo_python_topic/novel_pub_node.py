@@ -13,7 +13,7 @@ class NovelPubNode(Node):
         self.get_logger().info(f"{node_name},启动")
         self.novel_queue_=Queue() #创建队列
         self.novel_publisher_=self.create_publisher(msg_type=String,topic="novel",qos_profile=10)#最后一个是队列的大小
-        self.create_timer(timer_period_sec=5,callback=self.timer_callback)#这个地方的callback函数是隔一段时间会回调的函数
+        self.create_timer(timer_period_sec=1,callback=self.timer_callback)#这个地方的callback函数是隔一段时间会回调的函数
 
 
     def timer_callback(self):
