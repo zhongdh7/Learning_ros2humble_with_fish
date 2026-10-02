@@ -1,0 +1,3 @@
+/home/loser/learning_ros2/chapt3/topic_practice_ws/src/status_display/src/sys_status_display.cpp:31:51: warning: multi-character character constant [-Wmultichar]
+   31 |                 <<"数据时间：\t"<<msg->stamp.sec<<'\ts'<<'\n'
+      |                                                   ^~~~~
