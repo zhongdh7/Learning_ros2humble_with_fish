@@ -170,6 +170,167 @@ impl rosidl_runtime_rs::RmwMessage for FaceDetector_Response where Self: Sized {
 }
 
 
+#[link(name = "chapt4_interfaces__rosidl_typesupport_c")]
+extern "C" {
+    fn rosidl_typesupport_c__get_message_type_support_handle__chapt4_interfaces__srv__Patrol_Request() -> *const std::ffi::c_void;
+}
+
+#[link(name = "chapt4_interfaces__rosidl_generator_c")]
+extern "C" {
+    fn chapt4_interfaces__srv__Patrol_Request__init(msg: *mut Patrol_Request) -> bool;
+    fn chapt4_interfaces__srv__Patrol_Request__Sequence__init(seq: *mut rosidl_runtime_rs::Sequence<Patrol_Request>, size: usize) -> bool;
+    fn chapt4_interfaces__srv__Patrol_Request__Sequence__fini(seq: *mut rosidl_runtime_rs::Sequence<Patrol_Request>);
+    fn chapt4_interfaces__srv__Patrol_Request__Sequence__copy(in_seq: &rosidl_runtime_rs::Sequence<Patrol_Request>, out_seq: *mut rosidl_runtime_rs::Sequence<Patrol_Request>) -> bool;
+}
+
+// Corresponds to chapt4_interfaces__srv__Patrol_Request
+#[cfg_attr(feature = "serde", derive(Deserialize, Serialize))]
+
+
+// This struct is not documented.
+#[allow(missing_docs)]
+
+#[allow(non_camel_case_types)]
+#[repr(C)]
+#[derive(Clone, Debug, PartialEq, PartialOrd)]
+pub struct Patrol_Request {
+    /// 目标x值
+    pub target_x: f32,
+
+    /// 目标y值
+    pub target_y: f32,
+
+}
+
+
+
+impl Default for Patrol_Request {
+  fn default() -> Self {
+    unsafe {
+      let mut msg = std::mem::zeroed();
+      if !chapt4_interfaces__srv__Patrol_Request__init(&mut msg as *mut _) {
+        panic!("Call to chapt4_interfaces__srv__Patrol_Request__init() failed");
+      }
+      msg
+    }
+  }
+}
+
+impl rosidl_runtime_rs::SequenceAlloc for Patrol_Request {
+  fn sequence_init(seq: &mut rosidl_runtime_rs::Sequence<Self>, size: usize) -> bool {
+    // SAFETY: This is safe since the pointer is guaranteed to be valid/initialized.
+    unsafe { chapt4_interfaces__srv__Patrol_Request__Sequence__init(seq as *mut _, size) }
+  }
+  fn sequence_fini(seq: &mut rosidl_runtime_rs::Sequence<Self>) {
+    // SAFETY: This is safe since the pointer is guaranteed to be valid/initialized.
+    unsafe { chapt4_interfaces__srv__Patrol_Request__Sequence__fini(seq as *mut _) }
+  }
+  fn sequence_copy(in_seq: &rosidl_runtime_rs::Sequence<Self>, out_seq: &mut rosidl_runtime_rs::Sequence<Self>) -> bool {
+    // SAFETY: This is safe since the pointer is guaranteed to be valid/initialized.
+    unsafe { chapt4_interfaces__srv__Patrol_Request__Sequence__copy(in_seq, out_seq as *mut _) }
+  }
+}
+
+impl rosidl_runtime_rs::Message for Patrol_Request {
+  type RmwMsg = Self;
+  fn into_rmw_message(msg_cow: std::borrow::Cow<'_, Self>) -> std::borrow::Cow<'_, Self::RmwMsg> { msg_cow }
+  fn from_rmw_message(msg: Self::RmwMsg) -> Self { msg }
+}
+
+impl rosidl_runtime_rs::RmwMessage for Patrol_Request where Self: Sized {
+  const TYPE_NAME: &'static str = "chapt4_interfaces/srv/Patrol_Request";
+  fn get_type_support() -> *const std::ffi::c_void {
+    // SAFETY: No preconditions for this function.
+    unsafe { rosidl_typesupport_c__get_message_type_support_handle__chapt4_interfaces__srv__Patrol_Request() }
+  }
+}
+
+
+#[link(name = "chapt4_interfaces__rosidl_typesupport_c")]
+extern "C" {
+    fn rosidl_typesupport_c__get_message_type_support_handle__chapt4_interfaces__srv__Patrol_Response() -> *const std::ffi::c_void;
+}
+
+#[link(name = "chapt4_interfaces__rosidl_generator_c")]
+extern "C" {
+    fn chapt4_interfaces__srv__Patrol_Response__init(msg: *mut Patrol_Response) -> bool;
+    fn chapt4_interfaces__srv__Patrol_Response__Sequence__init(seq: *mut rosidl_runtime_rs::Sequence<Patrol_Response>, size: usize) -> bool;
+    fn chapt4_interfaces__srv__Patrol_Response__Sequence__fini(seq: *mut rosidl_runtime_rs::Sequence<Patrol_Response>);
+    fn chapt4_interfaces__srv__Patrol_Response__Sequence__copy(in_seq: &rosidl_runtime_rs::Sequence<Patrol_Response>, out_seq: *mut rosidl_runtime_rs::Sequence<Patrol_Response>) -> bool;
+}
+
+// Corresponds to chapt4_interfaces__srv__Patrol_Response
+#[cfg_attr(feature = "serde", derive(Deserialize, Serialize))]
+
+
+// This struct is not documented.
+#[allow(missing_docs)]
+
+#[allow(non_camel_case_types)]
+#[repr(C)]
+#[derive(Clone, Debug, PartialEq, PartialOrd)]
+pub struct Patrol_Response {
+    /// SUCCESS或者FAIL取其1
+    pub result: i8,
+
+}
+
+impl Patrol_Response {
+
+    // This constant is not documented.
+    #[allow(missing_docs)]
+    pub const SUCCESS: i8 = 1;
+
+
+    // This constant is not documented.
+    #[allow(missing_docs)]
+    pub const FAIL: i8 = 0;
+
+}
+
+
+impl Default for Patrol_Response {
+  fn default() -> Self {
+    unsafe {
+      let mut msg = std::mem::zeroed();
+      if !chapt4_interfaces__srv__Patrol_Response__init(&mut msg as *mut _) {
+        panic!("Call to chapt4_interfaces__srv__Patrol_Response__init() failed");
+      }
+      msg
+    }
+  }
+}
+
+impl rosidl_runtime_rs::SequenceAlloc for Patrol_Response {
+  fn sequence_init(seq: &mut rosidl_runtime_rs::Sequence<Self>, size: usize) -> bool {
+    // SAFETY: This is safe since the pointer is guaranteed to be valid/initialized.
+    unsafe { chapt4_interfaces__srv__Patrol_Response__Sequence__init(seq as *mut _, size) }
+  }
+  fn sequence_fini(seq: &mut rosidl_runtime_rs::Sequence<Self>) {
+    // SAFETY: This is safe since the pointer is guaranteed to be valid/initialized.
+    unsafe { chapt4_interfaces__srv__Patrol_Response__Sequence__fini(seq as *mut _) }
+  }
+  fn sequence_copy(in_seq: &rosidl_runtime_rs::Sequence<Self>, out_seq: &mut rosidl_runtime_rs::Sequence<Self>) -> bool {
+    // SAFETY: This is safe since the pointer is guaranteed to be valid/initialized.
+    unsafe { chapt4_interfaces__srv__Patrol_Response__Sequence__copy(in_seq, out_seq as *mut _) }
+  }
+}
+
+impl rosidl_runtime_rs::Message for Patrol_Response {
+  type RmwMsg = Self;
+  fn into_rmw_message(msg_cow: std::borrow::Cow<'_, Self>) -> std::borrow::Cow<'_, Self::RmwMsg> { msg_cow }
+  fn from_rmw_message(msg: Self::RmwMsg) -> Self { msg }
+}
+
+impl rosidl_runtime_rs::RmwMessage for Patrol_Response where Self: Sized {
+  const TYPE_NAME: &'static str = "chapt4_interfaces/srv/Patrol_Response";
+  fn get_type_support() -> *const std::ffi::c_void {
+    // SAFETY: No preconditions for this function.
+    unsafe { rosidl_typesupport_c__get_message_type_support_handle__chapt4_interfaces__srv__Patrol_Response() }
+  }
+}
+
+
 
 
 
@@ -190,6 +351,28 @@ impl rosidl_runtime_rs::Service for FaceDetector {
     fn get_type_support() -> *const std::ffi::c_void {
         // SAFETY: No preconditions for this function.
         unsafe { rosidl_typesupport_c__get_service_type_support_handle__chapt4_interfaces__srv__FaceDetector() }
+    }
+}
+
+
+
+
+#[link(name = "chapt4_interfaces__rosidl_typesupport_c")]
+extern "C" {
+    fn rosidl_typesupport_c__get_service_type_support_handle__chapt4_interfaces__srv__Patrol() -> *const std::ffi::c_void;
+}
+
+// Corresponds to chapt4_interfaces__srv__Patrol
+#[allow(missing_docs, non_camel_case_types)]
+pub struct Patrol;
+
+impl rosidl_runtime_rs::Service for Patrol {
+    type Request = Patrol_Request;
+    type Response = Patrol_Response;
+
+    fn get_type_support() -> *const std::ffi::c_void {
+        // SAFETY: No preconditions for this function.
+        unsafe { rosidl_typesupport_c__get_service_type_support_handle__chapt4_interfaces__srv__Patrol() }
     }
 }
 
