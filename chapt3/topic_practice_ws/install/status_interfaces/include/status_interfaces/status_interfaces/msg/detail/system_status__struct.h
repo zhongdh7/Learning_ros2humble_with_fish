@@ -21,7 +21,7 @@ extern "C"
 // Include directives for member types
 // Member 'stamp'
 #include "builtin_interfaces/msg/detail/time__struct.h"
-// Member 'name'
+// Member 'host_name'
 #include "rosidl_runtime_c/string.h"
 
 /// Struct defined in msg/SystemStatus in the package status_interfaces.
@@ -30,7 +30,7 @@ typedef struct status_interfaces__msg__SystemStatus
   /// 记录时间戳
   builtin_interfaces__msg__Time stamp;
   /// 主机名字
-  rosidl_runtime_c__String name;
+  rosidl_runtime_c__String host_name;
   /// CPU使用率
   float cpu_percent;
   /// 内存使用率

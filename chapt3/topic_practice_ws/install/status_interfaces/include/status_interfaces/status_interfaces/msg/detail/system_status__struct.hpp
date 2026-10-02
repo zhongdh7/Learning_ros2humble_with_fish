@@ -44,7 +44,7 @@ struct SystemStatus_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->name = "";
+      this->host_name = "";
       this->cpu_percent = 0.0f;
       this->memory_percent = 0.0f;
       this->memory_total = 0.0f;
@@ -56,12 +56,12 @@ struct SystemStatus_
 
   explicit SystemStatus_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
   : stamp(_alloc, _init),
-    name(_alloc)
+    host_name(_alloc)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->name = "";
+      this->host_name = "";
       this->cpu_percent = 0.0f;
       this->memory_percent = 0.0f;
       this->memory_total = 0.0f;
@@ -75,9 +75,9 @@ struct SystemStatus_
   using _stamp_type =
     builtin_interfaces::msg::Time_<ContainerAllocator>;
   _stamp_type stamp;
-  using _name_type =
+  using _host_name_type =
     std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
-  _name_type name;
+  _host_name_type host_name;
   using _cpu_percent_type =
     float;
   _cpu_percent_type cpu_percent;
@@ -104,10 +104,10 @@ struct SystemStatus_
     this->stamp = _arg;
     return *this;
   }
-  Type & set__name(
+  Type & set__host_name(
     const std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> & _arg)
   {
-    this->name = _arg;
+    this->host_name = _arg;
     return *this;
   }
   Type & set__cpu_percent(
@@ -192,7 +192,7 @@ struct SystemStatus_
     if (this->stamp != other.stamp) {
       return false;
     }
-    if (this->name != other.name) {
+    if (this->host_name != other.host_name) {
       return false;
     }
     if (this->cpu_percent != other.cpu_percent) {

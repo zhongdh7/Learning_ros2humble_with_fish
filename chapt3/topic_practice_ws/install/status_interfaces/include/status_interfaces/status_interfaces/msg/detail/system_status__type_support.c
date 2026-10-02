@@ -17,7 +17,7 @@
 #include "builtin_interfaces/msg/time.h"
 // Member `stamp`
 #include "builtin_interfaces/msg/detail/time__rosidl_typesupport_introspection_c.h"
-// Member `name`
+// Member `host_name`
 #include "rosidl_runtime_c/string_functions.h"
 
 #ifdef __cplusplus
@@ -58,14 +58,14 @@ static rosidl_typesupport_introspection_c__MessageMember status_interfaces__msg_
     NULL  // resize(index) function pointer
   },
   {
-    "name",  // name
+    "host_name",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(status_interfaces__msg__SystemStatus, name),  // bytes offset in struct
+    offsetof(status_interfaces__msg__SystemStatus, host_name),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer

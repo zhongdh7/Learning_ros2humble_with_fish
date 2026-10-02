@@ -29,7 +29,7 @@ pub struct SystemStatus {
     pub stamp: builtin_interfaces::msg::rmw::Time,
 
     /// 主机名字
-    pub name: rosidl_runtime_rs::String,
+    pub host_name: rosidl_runtime_rs::String,
 
     /// CPU使用率
     pub cpu_percent: f32,

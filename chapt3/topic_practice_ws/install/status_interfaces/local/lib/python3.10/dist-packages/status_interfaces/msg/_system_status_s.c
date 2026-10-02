@@ -68,8 +68,8 @@ bool status_interfaces__msg__system_status__convert_from_py(PyObject * _pymsg, v
     }
     Py_DECREF(field);
   }
-  {  // name
-    PyObject * field = PyObject_GetAttrString(_pymsg, "name");
+  {  // host_name
+    PyObject * field = PyObject_GetAttrString(_pymsg, "host_name");
     if (!field) {
       return false;
     }
@@ -79,7 +79,7 @@ bool status_interfaces__msg__system_status__convert_from_py(PyObject * _pymsg, v
       Py_DECREF(field);
       return false;
     }
-    rosidl_runtime_c__String__assign(&ros_message->name, PyBytes_AS_STRING(encoded_field));
+    rosidl_runtime_c__String__assign(&ros_message->host_name, PyBytes_AS_STRING(encoded_field));
     Py_DECREF(encoded_field);
     Py_DECREF(field);
   }
@@ -173,17 +173,17 @@ PyObject * status_interfaces__msg__system_status__convert_to_py(void * raw_ros_m
       }
     }
   }
-  {  // name
+  {  // host_name
     PyObject * field = NULL;
     field = PyUnicode_DecodeUTF8(
-      ros_message->name.data,
-      strlen(ros_message->name.data),
+      ros_message->host_name.data,
+      strlen(ros_message->host_name.data),
       "replace");
     if (!field) {
       return NULL;
     }
     {
-      int rc = PyObject_SetAttrString(_pymessage, "name", field);
+      int rc = PyObject_SetAttrString(_pymessage, "host_name", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

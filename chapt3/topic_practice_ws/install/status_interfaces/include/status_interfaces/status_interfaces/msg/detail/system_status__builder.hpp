@@ -117,15 +117,15 @@ private:
   ::status_interfaces::msg::SystemStatus msg_;
 };
 
-class Init_SystemStatus_name
+class Init_SystemStatus_host_name
 {
 public:
-  explicit Init_SystemStatus_name(::status_interfaces::msg::SystemStatus & msg)
+  explicit Init_SystemStatus_host_name(::status_interfaces::msg::SystemStatus & msg)
   : msg_(msg)
   {}
-  Init_SystemStatus_cpu_percent name(::status_interfaces::msg::SystemStatus::_name_type arg)
+  Init_SystemStatus_cpu_percent host_name(::status_interfaces::msg::SystemStatus::_host_name_type arg)
   {
-    msg_.name = std::move(arg);
+    msg_.host_name = std::move(arg);
     return Init_SystemStatus_cpu_percent(msg_);
   }
 
@@ -139,10 +139,10 @@ public:
   Init_SystemStatus_stamp()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  Init_SystemStatus_name stamp(::status_interfaces::msg::SystemStatus::_stamp_type arg)
+  Init_SystemStatus_host_name stamp(::status_interfaces::msg::SystemStatus::_stamp_type arg)
   {
     msg_.stamp = std::move(arg);
-    return Init_SystemStatus_name(msg_);
+    return Init_SystemStatus_host_name(msg_);
   }
 
 private:

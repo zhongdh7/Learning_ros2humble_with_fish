@@ -36,10 +36,10 @@ inline void to_flow_style_yaml(
     out << ", ";
   }
 
-  // member: name
+  // member: host_name
   {
-    out << "name: ";
-    rosidl_generator_traits::value_to_yaml(msg.name, out);
+    out << "host_name: ";
+    rosidl_generator_traits::value_to_yaml(msg.host_name, out);
     out << ", ";
   }
 
@@ -99,13 +99,13 @@ inline void to_block_style_yaml(
     to_block_style_yaml(msg.stamp, out, indentation + 2);
   }
 
-  // member: name
+  // member: host_name
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "name: ";
-    rosidl_generator_traits::value_to_yaml(msg.name, out);
+    out << "host_name: ";
+    rosidl_generator_traits::value_to_yaml(msg.host_name, out);
     out << "\n";
   }
 

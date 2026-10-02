@@ -15,7 +15,7 @@ pub struct SystemStatus {
     pub stamp: builtin_interfaces::msg::Time,
 
     /// 主机名字
-    pub name: std::string::String,
+    pub host_name: std::string::String,
 
     /// CPU使用率
     pub cpu_percent: f32,
@@ -52,7 +52,7 @@ impl rosidl_runtime_rs::Message for SystemStatus {
     match msg_cow {
       std::borrow::Cow::Owned(msg) => std::borrow::Cow::Owned(Self::RmwMsg {
         stamp: builtin_interfaces::msg::Time::into_rmw_message(std::borrow::Cow::Owned(msg.stamp)).into_owned(),
-        name: msg.name.as_str().into(),
+        host_name: msg.host_name.as_str().into(),
         cpu_percent: msg.cpu_percent,
         memory_percent: msg.memory_percent,
         memory_total: msg.memory_total,
@@ -62,7 +62,7 @@ impl rosidl_runtime_rs::Message for SystemStatus {
       }),
       std::borrow::Cow::Borrowed(msg) => std::borrow::Cow::Owned(Self::RmwMsg {
         stamp: builtin_interfaces::msg::Time::into_rmw_message(std::borrow::Cow::Borrowed(&msg.stamp)).into_owned(),
-        name: msg.name.as_str().into(),
+        host_name: msg.host_name.as_str().into(),
       cpu_percent: msg.cpu_percent,
       memory_percent: msg.memory_percent,
       memory_total: msg.memory_total,
@@ -76,7 +76,7 @@ impl rosidl_runtime_rs::Message for SystemStatus {
   fn from_rmw_message(msg: Self::RmwMsg) -> Self {
     Self {
       stamp: builtin_interfaces::msg::Time::from_rmw_message(msg.stamp),
-      name: msg.name.to_string(),
+      host_name: msg.host_name.to_string(),
       cpu_percent: msg.cpu_percent,
       memory_percent: msg.memory_percent,
       memory_total: msg.memory_total,

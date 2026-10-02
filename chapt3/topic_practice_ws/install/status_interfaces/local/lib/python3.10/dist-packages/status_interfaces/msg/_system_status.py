@@ -62,7 +62,7 @@ class SystemStatus(metaclass=Metaclass_SystemStatus):
 
     __slots__ = [
         '_stamp',
-        '_name',
+        '_host_name',
         '_cpu_percent',
         '_memory_percent',
         '_memory_total',
@@ -73,7 +73,7 @@ class SystemStatus(metaclass=Metaclass_SystemStatus):
 
     _fields_and_field_types = {
         'stamp': 'builtin_interfaces/Time',
-        'name': 'string',
+        'host_name': 'string',
         'cpu_percent': 'float',
         'memory_percent': 'float',
         'memory_total': 'float',
@@ -99,7 +99,7 @@ class SystemStatus(metaclass=Metaclass_SystemStatus):
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         from builtin_interfaces.msg import Time
         self.stamp = kwargs.get('stamp', Time())
-        self.name = kwargs.get('name', str())
+        self.host_name = kwargs.get('host_name', str())
         self.cpu_percent = kwargs.get('cpu_percent', float())
         self.memory_percent = kwargs.get('memory_percent', float())
         self.memory_total = kwargs.get('memory_total', float())
@@ -138,7 +138,7 @@ class SystemStatus(metaclass=Metaclass_SystemStatus):
             return False
         if self.stamp != other.stamp:
             return False
-        if self.name != other.name:
+        if self.host_name != other.host_name:
             return False
         if self.cpu_percent != other.cpu_percent:
             return False
@@ -174,17 +174,17 @@ class SystemStatus(metaclass=Metaclass_SystemStatus):
         self._stamp = value
 
     @builtins.property
-    def name(self):
-        """Message field 'name'."""
-        return self._name
+    def host_name(self):
+        """Message field 'host_name'."""
+        return self._host_name
 
-    @name.setter
-    def name(self, value):
+    @host_name.setter
+    def host_name(self, value):
         if __debug__:
             assert \
                 isinstance(value, str), \
-                "The 'name' field must be of type 'str'"
-        self._name = value
+                "The 'host_name' field must be of type 'str'"
+        self._host_name = value
 
     @builtins.property
     def cpu_percent(self):

@@ -13,7 +13,7 @@ module status_interfaces {
 
       @verbatim (language="comment", text=
         "主机名字")
-      string name;
+      string host_name;
 
       @verbatim (language="comment", text=
         "CPU使用率")

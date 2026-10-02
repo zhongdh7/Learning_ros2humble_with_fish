@@ -14,7 +14,7 @@
 // Include directives for member types
 // Member `stamp`
 #include "builtin_interfaces/msg/detail/time__functions.h"
-// Member `name`
+// Member `host_name`
 #include "rosidl_runtime_c/string_functions.h"
 
 bool
@@ -28,8 +28,8 @@ status_interfaces__msg__SystemStatus__init(status_interfaces__msg__SystemStatus 
     status_interfaces__msg__SystemStatus__fini(msg);
     return false;
   }
-  // name
-  if (!rosidl_runtime_c__String__init(&msg->name)) {
+  // host_name
+  if (!rosidl_runtime_c__String__init(&msg->host_name)) {
     status_interfaces__msg__SystemStatus__fini(msg);
     return false;
   }
@@ -50,8 +50,8 @@ status_interfaces__msg__SystemStatus__fini(status_interfaces__msg__SystemStatus 
   }
   // stamp
   builtin_interfaces__msg__Time__fini(&msg->stamp);
-  // name
-  rosidl_runtime_c__String__fini(&msg->name);
+  // host_name
+  rosidl_runtime_c__String__fini(&msg->host_name);
   // cpu_percent
   // memory_percent
   // memory_total
@@ -72,9 +72,9 @@ status_interfaces__msg__SystemStatus__are_equal(const status_interfaces__msg__Sy
   {
     return false;
   }
-  // name
+  // host_name
   if (!rosidl_runtime_c__String__are_equal(
-      &(lhs->name), &(rhs->name)))
+      &(lhs->host_name), &(rhs->host_name)))
   {
     return false;
   }
@@ -119,9 +119,9 @@ status_interfaces__msg__SystemStatus__copy(
   {
     return false;
   }
-  // name
+  // host_name
   if (!rosidl_runtime_c__String__copy(
-      &(input->name), &(output->name)))
+      &(input->host_name), &(output->host_name)))
   {
     return false;
   }
