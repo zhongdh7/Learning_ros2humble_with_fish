@@ -1,6 +1,8 @@
 import rclpy 
 from rclpy.node import Node
+from rclpy.parameter import Parameter
 from chapt4_interfaces.srv import FaceDetector
+from rcl_interfaces.msg import SetParametersResult
 import face_recognition
 import cv2
 from ament_index_python.packages import get_package_share_directory
@@ -16,11 +18,24 @@ class FaceDetectNode(Node):
         self.bridge=CvBridge()
         self.declare_parameter("number_of_times_to_unsample",value=1)
         self.declare_parameter("model",value="cnn")
-        self.number_of_times_to_unsample=self.get_parameter("number_of_times_to_unsample")
-        self.model=self.get_parameter("model")
+        self.number_of_times_to_unsample=self.get_parameter("number_of_times_to_unsample").value
+        self.model=self.get_parameter("model").value
         self.default_image_path=os.path.join(get_package_share_directory("demo_python_service"),
                                              "resource","default.jpg")
         self.get_logger().info("检测服务启动")
+
+
+        #这个是系统更新parameter的时候调用的回调函数，这边我们在这个里面加入我们自己想要的回调函数内容
+        self.add_on_set_parameters_callback(self.parameter_callback)
+
+    def parameter_callback(self,parameters: list[Parameter]):
+        for param in parameters:
+            self.get_logger().info(f"{param.name}->{param.value}")
+            if param.name=="number_of_times_to_unsample":
+                self.number_of_times_to_unsample=param.value
+            if param.name=="model":
+                self.model=param.value
+        return SetParametersResult(successful=True)
 
 
 
