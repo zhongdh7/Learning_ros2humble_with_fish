@@ -1,0 +1,2 @@
+Invoking command in '/home/loser/learning_ros2/chapt3/topic_ws/build/demo_cpp_topic': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/loser/learning_ros2/chapt3/topic_ws/build/demo_cpp_topic -- -j24 -l24
+Invoked command in '/home/loser/learning_ros2/chapt3/topic_ws/build/demo_cpp_topic' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/loser/learning_ros2/chapt3/topic_ws/build/demo_cpp_topic -- -j24 -l24
