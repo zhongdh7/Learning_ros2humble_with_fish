@@ -1,0 +1,26 @@
+[0.295s] Invoking command in '/home/loser/learning_ros2/chapt4/chapt4_ws/src/demo_python_service': LD_LIBRARY_PATH=/home/loser/learning_ros2/chapt4/chapt4_ws/install/chapt4_interfaces/lib:/usr/local/cuda-12.8/lib64:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.8/lib64 PYTHONPATH=/home/loser/learning_ros2/chapt4/chapt4_ws/build/demo_python_service/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/loser/learning_ros2/chapt4/chapt4_ws/install/demo_python_service/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/demo_python_service build --build-base /home/loser/learning_ros2/chapt4/chapt4_ws/build/demo_python_service/build install --record /home/loser/learning_ros2/chapt4/chapt4_ws/build/demo_python_service/install.log --install-scripts $base/lib/demo_python_service --single-version-externally-managed install_data
+[0.421s] running egg_info
+[0.421s] writing ../../build/demo_python_service/demo_python_service.egg-info/PKG-INFO
+[0.421s] writing dependency_links to ../../build/demo_python_service/demo_python_service.egg-info/dependency_links.txt
+[0.421s] writing entry points to ../../build/demo_python_service/demo_python_service.egg-info/entry_points.txt
+[0.421s] writing requirements to ../../build/demo_python_service/demo_python_service.egg-info/requires.txt
+[0.421s] writing top-level names to ../../build/demo_python_service/demo_python_service.egg-info/top_level.txt
+[0.423s] reading manifest file '../../build/demo_python_service/demo_python_service.egg-info/SOURCES.txt'
+[0.423s] adding license file 'LICENSE'
+[0.423s] writing manifest file '../../build/demo_python_service/demo_python_service.egg-info/SOURCES.txt'
+[0.423s] running build
+[0.423s] running build_py
+[0.423s] copying demo_python_service/face_detect_node.py -> /home/loser/learning_ros2/chapt4/chapt4_ws/build/demo_python_service/build/lib/demo_python_service
+[0.423s] running install
+[0.423s] running install_lib
+[0.424s] copying /home/loser/learning_ros2/chapt4/chapt4_ws/build/demo_python_service/build/lib/demo_python_service/face_detect_node.py -> /home/loser/learning_ros2/chapt4/chapt4_ws/install/demo_python_service/lib/python3.10/site-packages/demo_python_service
+[0.424s] byte-compiling /home/loser/learning_ros2/chapt4/chapt4_ws/install/demo_python_service/lib/python3.10/site-packages/demo_python_service/face_detect_node.py to face_detect_node.cpython-310.pyc
+[0.424s] running install_data
+[0.424s] running install_egg_info
+[0.425s] removing '/home/loser/learning_ros2/chapt4/chapt4_ws/install/demo_python_service/lib/python3.10/site-packages/demo_python_service-0.0.0-py3.10.egg-info' (and everything under it)
+[0.426s] Copying ../../build/demo_python_service/demo_python_service.egg-info to /home/loser/learning_ros2/chapt4/chapt4_ws/install/demo_python_service/lib/python3.10/site-packages/demo_python_service-0.0.0-py3.10.egg-info
+[0.426s] running install_scripts
+[0.440s] Installing face_detect_node script to /home/loser/learning_ros2/chapt4/chapt4_ws/install/demo_python_service/lib/demo_python_service
+[0.440s] Installing learn_face_detect script to /home/loser/learning_ros2/chapt4/chapt4_ws/install/demo_python_service/lib/demo_python_service
+[0.440s] writing list of installed files to '/home/loser/learning_ros2/chapt4/chapt4_ws/build/demo_python_service/install.log'
+[0.454s] Invoked command in '/home/loser/learning_ros2/chapt4/chapt4_ws/src/demo_python_service' returned '0': LD_LIBRARY_PATH=/home/loser/learning_ros2/chapt4/chapt4_ws/install/chapt4_interfaces/lib:/usr/local/cuda-12.8/lib64:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.8/lib64 PYTHONPATH=/home/loser/learning_ros2/chapt4/chapt4_ws/build/demo_python_service/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/loser/learning_ros2/chapt4/chapt4_ws/install/demo_python_service/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/demo_python_service build --build-base /home/loser/learning_ros2/chapt4/chapt4_ws/build/demo_python_service/build install --record /home/loser/learning_ros2/chapt4/chapt4_ws/build/demo_python_service/install.log --install-scripts $base/lib/demo_python_service --single-version-externally-managed install_data
