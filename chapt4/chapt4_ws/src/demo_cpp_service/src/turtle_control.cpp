@@ -4,6 +4,7 @@
 #include <functional>
 #include <chrono>
 #include "chapt4_interfaces/srv/patrol.hpp"
+// #include "rcl_interfaces/srv/"
 
 using chapt4_interfaces::srv::Patrol;
 
@@ -26,6 +27,10 @@ private:
 public:
     TurtleControlNode() : Node("turtle_control_node"), k(1.0), max_speed(3.0),target_x_(3.0),target_y_(3.0),target_z_(0)
     {
+        this->declare_parameter("k",1.0);
+        this->declare_parameter("max_speed",1.0);
+        this->get_parameter("k",k);
+        this->get_parameter("max_speed",max_speed);
         publisher_ = this->create_publisher<Twist>("/turtle1/cmd_vel", 10);
         subscriber_ = this->create_subscription<Pose>("/turtle1/pose", 10, std::bind(&TurtleControlNode::on_pose_received, this, std::placeholders::_1));
         server_ = this->create_service<Patrol>("patrol",

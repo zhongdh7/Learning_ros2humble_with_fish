@@ -1,6 +1,6 @@
 import rclpy 
 from rclpy.node import Node
-# from rclpy.parameter import Parameter
+from rclpy.parameter import Parameter
 from chapt4_interfaces.srv import FaceDetector
 from rcl_interfaces.msg import SetParametersResult
 

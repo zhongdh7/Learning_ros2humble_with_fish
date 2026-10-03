@@ -1,0 +1,33 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/turtle_control.dir/src/turtle_control.cpp.o[0m
+[ 75%] Built target patrol_client
+[01m[K/home/loser/learning_ros2/chapt4/chapt4_ws/src/demo_cpp_service/src/turtle_control.cpp:[m[K In constructor ‘[01m[KTurtleControlNode::TurtleControlNode()[m[K’:
+[01m[K/home/loser/learning_ros2/chapt4/chapt4_ws/src/demo_cpp_service/src/turtle_control.cpp:24:12:[m[K [01;35m[Kwarning: [m[K‘[01m[KTurtleControlNode::max_speed[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+   24 |     double [01;35m[Kmax_speed[m[K;
+      |            [01;35m[K^~~~~~~~~[m[K
+[01m[K/home/loser/learning_ros2/chapt4/chapt4_ws/src/demo_cpp_service/src/turtle_control.cpp:20:12:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kdouble TurtleControlNode::target_x_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+   20 |     double [01;35m[Ktarget_x_[m[K;
+      |            [01;35m[K^~~~~~~~~[m[K
+[01m[K/home/loser/learning_ros2/chapt4/chapt4_ws/src/demo_cpp_service/src/turtle_control.cpp:27:5:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+   27 |     [01;35m[KTurtleControlNode[m[K() : Node("turtle_control_node"), k(1.0), max_speed(3.0),target_x_(3.0),target_y_(3.0),target_z_(0)
+      |     [01;35m[K^~~~~~~~~~~~~~~~~[m[K
+[100%] [32m[1mLinking CXX executable turtle_control[0m
+[100%] Built target turtle_control
+-- Install configuration: ""
+-- Installing: /home/loser/learning_ros2/chapt4/chapt4_ws/install/demo_cpp_service/lib/demo_cpp_service/turtle_control
+-- Set runtime path of "/home/loser/learning_ros2/chapt4/chapt4_ws/install/demo_cpp_service/lib/demo_cpp_service/turtle_control" to ""
+-- Up-to-date: /home/loser/learning_ros2/chapt4/chapt4_ws/install/demo_cpp_service/lib/demo_cpp_service/patrol_client
+-- Up-to-date: /home/loser/learning_ros2/chapt4/chapt4_ws/install/demo_cpp_service/share/ament_index/resource_index/package_run_dependencies/demo_cpp_service
+-- Up-to-date: /home/loser/learning_ros2/chapt4/chapt4_ws/install/demo_cpp_service/share/ament_index/resource_index/parent_prefix_path/demo_cpp_service
+-- Up-to-date: /home/loser/learning_ros2/chapt4/chapt4_ws/install/demo_cpp_service/share/demo_cpp_service/environment/ament_prefix_path.sh
+-- Up-to-date: /home/loser/learning_ros2/chapt4/chapt4_ws/install/demo_cpp_service/share/demo_cpp_service/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/loser/learning_ros2/chapt4/chapt4_ws/install/demo_cpp_service/share/demo_cpp_service/environment/path.sh
+-- Up-to-date: /home/loser/learning_ros2/chapt4/chapt4_ws/install/demo_cpp_service/share/demo_cpp_service/environment/path.dsv
+-- Up-to-date: /home/loser/learning_ros2/chapt4/chapt4_ws/install/demo_cpp_service/share/demo_cpp_service/local_setup.bash
+-- Up-to-date: /home/loser/learning_ros2/chapt4/chapt4_ws/install/demo_cpp_service/share/demo_cpp_service/local_setup.sh
+-- Up-to-date: /home/loser/learning_ros2/chapt4/chapt4_ws/install/demo_cpp_service/share/demo_cpp_service/local_setup.zsh
+-- Up-to-date: /home/loser/learning_ros2/chapt4/chapt4_ws/install/demo_cpp_service/share/demo_cpp_service/local_setup.dsv
+-- Installing: /home/loser/learning_ros2/chapt4/chapt4_ws/install/demo_cpp_service/share/demo_cpp_service/package.dsv
+-- Up-to-date: /home/loser/learning_ros2/chapt4/chapt4_ws/install/demo_cpp_service/share/ament_index/resource_index/packages/demo_cpp_service
+-- Up-to-date: /home/loser/learning_ros2/chapt4/chapt4_ws/install/demo_cpp_service/share/demo_cpp_service/cmake/demo_cpp_serviceConfig.cmake
+-- Up-to-date: /home/loser/learning_ros2/chapt4/chapt4_ws/install/demo_cpp_service/share/demo_cpp_service/cmake/demo_cpp_serviceConfig-version.cmake
+-- Up-to-date: /home/loser/learning_ros2/chapt4/chapt4_ws/install/demo_cpp_service/share/demo_cpp_service/package.xml

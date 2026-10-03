@@ -48,7 +48,7 @@ class FaceDetectorClientNode(Node):
         param.value=param_value
 
         #请求更新参数
-        response=self.call_set_parameters([param])
+        response: SetParameters.Response=self.call_set_parameters([param])
         for result in response.results:
             self.get_logger().info(f"设置参数结果:{result.successful} {result.reason}")
 
