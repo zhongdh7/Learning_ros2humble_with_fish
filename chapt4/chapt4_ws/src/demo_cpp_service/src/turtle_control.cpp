@@ -108,6 +108,7 @@ int main(int argc, const char **argv)
 {
     rclcpp::init(argc, argv);
     auto node = std::make_shared<TurtleControlNode>();
+    node->set_parameter(rclcpp::Parameter("k",2.0));//节点内部修改参数
     rclcpp::spin(node);
     rclcpp::shutdown();
     return 0;
