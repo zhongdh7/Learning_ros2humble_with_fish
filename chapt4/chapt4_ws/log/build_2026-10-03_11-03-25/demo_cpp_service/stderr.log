@@ -1,0 +1,10 @@
+/home/loser/learning_ros2/chapt4/chapt4_ws/src/demo_cpp_service/src/turtle_control.cpp: In constructor ‘TurtleControlNode::TurtleControlNode()’:
+/home/loser/learning_ros2/chapt4/chapt4_ws/src/demo_cpp_service/src/turtle_control.cpp:27:12: warning: ‘TurtleControlNode::max_speed’ will be initialized after [-Wreorder]
+   27 |     double max_speed;
+      |            ^~~~~~~~~
+/home/loser/learning_ros2/chapt4/chapt4_ws/src/demo_cpp_service/src/turtle_control.cpp:23:12: warning:   ‘double TurtleControlNode::target_x_’ [-Wreorder]
+   23 |     double target_x_;
+      |            ^~~~~~~~~
+/home/loser/learning_ros2/chapt4/chapt4_ws/src/demo_cpp_service/src/turtle_control.cpp:31:5: warning:   when initialized here [-Wreorder]
+   31 |     TurtleControlNode() : Node("turtle_control_node"), k(1.0), max_speed(3.0), target_x_(3.0), target_y_(3.0), target_z_(0)
+      |     ^~~~~~~~~~~~~~~~~

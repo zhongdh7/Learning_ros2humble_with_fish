@@ -1,0 +1,38 @@
+[0.008s] Invoking command in '/home/loser/learning_ros2/chapt4/chapt4_ws/build/demo_cpp_service': CMAKE_PREFIX_PATH=/home/loser/learning_ros2/chapt4/chapt4_ws/install/chapt4_interfaces:/home/loser/learning_ros2/chapt4/chapt4_ws/install/demo_cpp_service:/home/loser/learning_ros2/chapt4/chapt4_ws/install/demo_python_service:/opt/ros/humble LD_LIBRARY_PATH=/home/loser/learning_ros2/chapt4/chapt4_ws/install/chapt4_interfaces/lib:/usr/local/cuda-12.8/lib64:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.8/lib64 /usr/bin/cmake --build /home/loser/learning_ros2/chapt4/chapt4_ws/build/demo_cpp_service -- -j24 -l24
+[0.038s] Consolidate compiler generated dependencies of target turtle_control
+[0.043s] [ 50%] Built target patrol_client
+[0.046s] [ 75%] Building CXX object CMakeFiles/turtle_control.dir/src/turtle_control.cpp.o
+[1.157s] /home/loser/learning_ros2/chapt4/chapt4_ws/src/demo_cpp_service/src/turtle_control.cpp: In constructor ‘TurtleControlNode::TurtleControlNode()’:
+[1.157s] /home/loser/learning_ros2/chapt4/chapt4_ws/src/demo_cpp_service/src/turtle_control.cpp:27:12: warning: ‘TurtleControlNode::max_speed’ will be initialized after [-Wreorder]
+[1.157s]    27 |     double max_speed;
+[1.157s]       |            ^~~~~~~~~
+[1.157s] /home/loser/learning_ros2/chapt4/chapt4_ws/src/demo_cpp_service/src/turtle_control.cpp:23:12: warning:   ‘double TurtleControlNode::target_x_’ [-Wreorder]
+[1.157s]    23 |     double target_x_;
+[1.157s]       |            ^~~~~~~~~
+[1.157s] /home/loser/learning_ros2/chapt4/chapt4_ws/src/demo_cpp_service/src/turtle_control.cpp:31:5: warning:   when initialized here [-Wreorder]
+[1.157s]    31 |     TurtleControlNode() : Node("turtle_control_node"), k(1.0), max_speed(3.0), target_x_(3.0), target_y_(3.0), target_z_(0)
+[1.157s]       |     ^~~~~~~~~~~~~~~~~
+[4.254s] [100%] Linking CXX executable turtle_control
+[4.489s] [100%] Built target turtle_control
+[4.495s] Invoked command in '/home/loser/learning_ros2/chapt4/chapt4_ws/build/demo_cpp_service' returned '0': CMAKE_PREFIX_PATH=/home/loser/learning_ros2/chapt4/chapt4_ws/install/chapt4_interfaces:/home/loser/learning_ros2/chapt4/chapt4_ws/install/demo_cpp_service:/home/loser/learning_ros2/chapt4/chapt4_ws/install/demo_python_service:/opt/ros/humble LD_LIBRARY_PATH=/home/loser/learning_ros2/chapt4/chapt4_ws/install/chapt4_interfaces/lib:/usr/local/cuda-12.8/lib64:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.8/lib64 /usr/bin/cmake --build /home/loser/learning_ros2/chapt4/chapt4_ws/build/demo_cpp_service -- -j24 -l24
+[4.501s] Invoking command in '/home/loser/learning_ros2/chapt4/chapt4_ws/build/demo_cpp_service': CMAKE_PREFIX_PATH=/home/loser/learning_ros2/chapt4/chapt4_ws/install/chapt4_interfaces:/home/loser/learning_ros2/chapt4/chapt4_ws/install/demo_cpp_service:/home/loser/learning_ros2/chapt4/chapt4_ws/install/demo_python_service:/opt/ros/humble LD_LIBRARY_PATH=/home/loser/learning_ros2/chapt4/chapt4_ws/install/chapt4_interfaces/lib:/usr/local/cuda-12.8/lib64:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.8/lib64 /usr/bin/cmake --install /home/loser/learning_ros2/chapt4/chapt4_ws/build/demo_cpp_service
+[4.504s] -- Install configuration: ""
+[4.504s] -- Installing: /home/loser/learning_ros2/chapt4/chapt4_ws/install/demo_cpp_service/lib/demo_cpp_service/turtle_control
+[4.507s] -- Set runtime path of "/home/loser/learning_ros2/chapt4/chapt4_ws/install/demo_cpp_service/lib/demo_cpp_service/turtle_control" to ""
+[4.507s] -- Up-to-date: /home/loser/learning_ros2/chapt4/chapt4_ws/install/demo_cpp_service/lib/demo_cpp_service/patrol_client
+[4.507s] -- Up-to-date: /home/loser/learning_ros2/chapt4/chapt4_ws/install/demo_cpp_service/share/ament_index/resource_index/package_run_dependencies/demo_cpp_service
+[4.508s] -- Up-to-date: /home/loser/learning_ros2/chapt4/chapt4_ws/install/demo_cpp_service/share/ament_index/resource_index/parent_prefix_path/demo_cpp_service
+[4.508s] -- Up-to-date: /home/loser/learning_ros2/chapt4/chapt4_ws/install/demo_cpp_service/share/demo_cpp_service/environment/ament_prefix_path.sh
+[4.508s] -- Up-to-date: /home/loser/learning_ros2/chapt4/chapt4_ws/install/demo_cpp_service/share/demo_cpp_service/environment/ament_prefix_path.dsv
+[4.508s] -- Up-to-date: /home/loser/learning_ros2/chapt4/chapt4_ws/install/demo_cpp_service/share/demo_cpp_service/environment/path.sh
+[4.508s] -- Up-to-date: /home/loser/learning_ros2/chapt4/chapt4_ws/install/demo_cpp_service/share/demo_cpp_service/environment/path.dsv
+[4.508s] -- Up-to-date: /home/loser/learning_ros2/chapt4/chapt4_ws/install/demo_cpp_service/share/demo_cpp_service/local_setup.bash
+[4.508s] -- Up-to-date: /home/loser/learning_ros2/chapt4/chapt4_ws/install/demo_cpp_service/share/demo_cpp_service/local_setup.sh
+[4.508s] -- Up-to-date: /home/loser/learning_ros2/chapt4/chapt4_ws/install/demo_cpp_service/share/demo_cpp_service/local_setup.zsh
+[4.508s] -- Up-to-date: /home/loser/learning_ros2/chapt4/chapt4_ws/install/demo_cpp_service/share/demo_cpp_service/local_setup.dsv
+[4.508s] -- Installing: /home/loser/learning_ros2/chapt4/chapt4_ws/install/demo_cpp_service/share/demo_cpp_service/package.dsv
+[4.508s] -- Up-to-date: /home/loser/learning_ros2/chapt4/chapt4_ws/install/demo_cpp_service/share/ament_index/resource_index/packages/demo_cpp_service
+[4.508s] -- Up-to-date: /home/loser/learning_ros2/chapt4/chapt4_ws/install/demo_cpp_service/share/demo_cpp_service/cmake/demo_cpp_serviceConfig.cmake
+[4.508s] -- Up-to-date: /home/loser/learning_ros2/chapt4/chapt4_ws/install/demo_cpp_service/share/demo_cpp_service/cmake/demo_cpp_serviceConfig-version.cmake
+[4.508s] -- Up-to-date: /home/loser/learning_ros2/chapt4/chapt4_ws/install/demo_cpp_service/share/demo_cpp_service/package.xml
+[4.509s] Invoked command in '/home/loser/learning_ros2/chapt4/chapt4_ws/build/demo_cpp_service' returned '0': CMAKE_PREFIX_PATH=/home/loser/learning_ros2/chapt4/chapt4_ws/install/chapt4_interfaces:/home/loser/learning_ros2/chapt4/chapt4_ws/install/demo_cpp_service:/home/loser/learning_ros2/chapt4/chapt4_ws/install/demo_python_service:/opt/ros/humble LD_LIBRARY_PATH=/home/loser/learning_ros2/chapt4/chapt4_ws/install/chapt4_interfaces/lib:/usr/local/cuda-12.8/lib64:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.8/lib64 /usr/bin/cmake --install /home/loser/learning_ros2/chapt4/chapt4_ws/build/demo_cpp_service

@@ -4,7 +4,9 @@
 #include <functional>
 #include <chrono>
 #include "chapt4_interfaces/srv/patrol.hpp"
-// #include "rcl_interfaces/srv/"
+#include "rcl_interfaces/msg/set_parameters_result.hpp"
+
+using rcl_interfaces::msg::SetParametersResult;
 
 using chapt4_interfaces::srv::Patrol;
 
@@ -23,14 +25,36 @@ private:
     double target_z_;
     double k;
     double max_speed;
+    OnSetParametersCallbackHandle::SharedPtr parameter_callback_handle;
 
 public:
-    TurtleControlNode() : Node("turtle_control_node"), k(1.0), max_speed(3.0),target_x_(3.0),target_y_(3.0),target_z_(0)
+    TurtleControlNode() : Node("turtle_control_node"), k(1.0), max_speed(3.0), target_x_(3.0), target_y_(3.0), target_z_(0)
     {
-        this->declare_parameter("k",1.0);
-        this->declare_parameter("max_speed",1.0);
-        this->get_parameter("k",k);
-        this->get_parameter("max_speed",max_speed);
+        this->declare_parameter("k", 1.0);
+        this->declare_parameter("max_speed", 1.0);
+        this->get_parameter("k", k);
+        this->get_parameter("max_speed", max_speed);
+        parameter_callback_handle = this->add_on_set_parameters_callback(
+            [&](const std::vector<rclcpp::Parameter> &parameters)
+                -> rcl_interfaces::msg::SetParametersResult
+            {
+                SetParametersResult result;
+                result.successful = true;
+                for (const auto &param : parameters)
+                {
+                    if (param.get_name() == "k")
+                    {
+                        this->k = param.as_double();
+                        RCLCPP_INFO(this->get_logger(), "更新参数值:%s=%f", param.get_name().c_str(), param.as_double());
+                    }
+                    if (param.get_name() == "max_speed")
+                    {
+                        this->max_speed = param.as_double();
+                        RCLCPP_INFO(this->get_logger(), "更新参数值:%s=%f", param.get_name().c_str(), param.as_double());
+                    }
+                }
+                return result;
+            });
         publisher_ = this->create_publisher<Twist>("/turtle1/cmd_vel", 10);
         subscriber_ = this->create_subscription<Pose>("/turtle1/pose", 10, std::bind(&TurtleControlNode::on_pose_received, this, std::placeholders::_1));
         server_ = this->create_service<Patrol>("patrol",
