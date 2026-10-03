@@ -1,8 +1,11 @@
 import rclpy 
 from rclpy.node import Node
-from rclpy.parameter import Parameter
+# from rclpy.parameter import Parameter
 from chapt4_interfaces.srv import FaceDetector
 from rcl_interfaces.msg import SetParametersResult
+
+
+
 import face_recognition
 import cv2
 from ament_index_python.packages import get_package_share_directory
@@ -13,7 +16,6 @@ import time
 class FaceDetectNode(Node):
     def __init__(self):
         super().__init__("face_detect_node")
-        
         self.service_=self.create_service(FaceDetector,"face_detect",self.detect_face_callback)
         self.bridge=CvBridge()
         self.declare_parameter("number_of_times_to_unsample",value=1)
@@ -36,7 +38,6 @@ class FaceDetectNode(Node):
             if param.name=="model":
                 self.model=param.value
         return SetParametersResult(successful=True)
-
 
 
     def detect_face_callback(self,request: FaceDetector.Request,response: FaceDetector.Response):
