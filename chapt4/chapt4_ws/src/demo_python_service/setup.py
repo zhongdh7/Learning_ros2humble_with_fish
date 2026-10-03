@@ -13,7 +13,7 @@ setup(
         ('share/' + package_name, ['package.xml']),
         ('share/' + package_name + "/resource", ['resource/default.jpg']),
         ('share/' + package_name + "/resource", ['resource/test1.jpg',"resource/bus.jpg"]),
-        ("share/" + package_name + "launch",glob("launch/*.launch.py")),
+        ("share/" + package_name + "/launch",glob("launch/*.launch.py")),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
