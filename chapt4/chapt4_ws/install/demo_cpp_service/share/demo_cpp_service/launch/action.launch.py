@@ -7,6 +7,10 @@ def generate_launch_description():
     #注意：default_value 必须是字符串，写 150（int）会报 'int' object is not iterable
     action_declare_arg_bg=launch.actions.DeclareLaunchArgument("launch_arg_bg",default_value="255",description="修改小海龟的节点的背景g")
 
+    #注意:这里必须写 "3.0" 而不是 "3"。launch 会把参数写成 YAML 文件传给节点,
+    #YAML 会做类型推断:"3.0"->double,"3"->integer,而节点声明的 max_speed 是 double,
+    #类型不匹配节点会抛 InvalidParameterTypeException 直接崩掉。
+    action_declare_arg_max_speed=launch.actions.DeclareLaunchArgument("launch_arg_max_speed",default_value="3.0",description="小乌龟运动的最大速度")
     action_node_turtlesim=launch_ros.actions.Node(
         package="turtlesim",
         executable="turtlesim_node",
@@ -25,11 +29,13 @@ def generate_launch_description():
     action_node_turtle_control=launch_ros.actions.Node(
         package="demo_cpp_service",
         executable="turtle_control",
-        output="log"
+        output="log",
+        parameters=[{"max_speed":launch.substitutions.LaunchConfiguration("launch_arg_max_speed")}]
     )
     return launch.LaunchDescription([
         action_declare_arg_bg,
+        action_declare_arg_max_speed,
         action_node_turtlesim,
         action_node_turtle_control,
-        action_node_partol_client
+        action_node_partol_client,
     ])
