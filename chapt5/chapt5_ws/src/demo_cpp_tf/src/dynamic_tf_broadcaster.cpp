@@ -2,33 +2,37 @@
 #include "geometry_msgs/msg/transform_stamped.hpp"
 #include "tf2/LinearMath/Quaternion.hpp" //提供tf2::Quaternion类
 #include "tf2_geometry_msgs/tf2_geometry_msgs.hpp"
-#include "tf2_ros/static_transform_broadcaster.hpp" //静态坐标广播器
+#include "tf2_ros/transform_broadcaster.hpp" //动态坐标广播器
+#include <chrono>
+
+using namespace std::chrono_literals;
 
 using geometry_msgs::msg::TransformStamped;
 
-class StaticTFBroadcaster : public rclcpp::Node
+class TFBroadcaster : public rclcpp::Node
 {
 private:
-    std::shared_ptr<tf2_ros::StaticTransformBroadcaster> broadcaster_;
+    std::shared_ptr<tf2_ros::TransformBroadcaster> broadcaster_;
+    rclcpp::TimerBase::SharedPtr timer_;
 
 public:
-    StaticTFBroadcaster() : Node("static_tf_broadcaster")
+    TFBroadcaster() : Node("dynamic_tf_broadcaster")
     {
-        broadcaster_ = std::make_shared<tf2_ros::StaticTransformBroadcaster>(this);
-        this->publish_tf();
+        broadcaster_ = std::make_shared<tf2_ros::TransformBroadcaster>(this);
+        timer_ = this->create_wall_timer(100ms, std::bind(&TFBroadcaster::publish_tf, this));
     }
     void publish_tf()
     {
         TransformStamped transform;
         transform.header.stamp = this->get_clock()->now();
         transform.header.frame_id = "map";
-        transform.child_frame_id = "target_point";
-        transform.transform.translation.x = 5.0;
+        transform.child_frame_id = "base_link";
+        transform.transform.translation.x = 2.0;
         transform.transform.translation.y = 3.0;
         transform.transform.translation.z = 0.0;
 
         tf2::Quaternion q;
-        q.setRPY(0, 0, 60 * M_PI / 180);
+        q.setRPY(0, 0, 30 * M_PI / 180);
         transform.transform.rotation = tf2::toMsg(q);
         this->broadcaster_->sendTransform(transform);
     }
@@ -37,7 +41,7 @@ public:
 int main(int argc, const char **argv)
 {
     rclcpp::init(argc, argv);
-    auto node = std::make_shared<StaticTFBroadcaster>();
+    auto node = std::make_shared<TFBroadcaster>();
     rclcpp::spin(node);
     rclcpp::shutdown();
     return 0;
