@@ -1,0 +1,70 @@
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/loser/learning_ros2/chapt5/chapt5_ws/src/demo_cpp_tf/src/tf_listener.cpp:1[m[K:
+[01m[K/home/loser/learning_ros2/chapt5/chapt5_ws/src/demo_cpp_tf/src/tf_listener.cpp:[m[K In member function ‘[01m[Kvoid TFListener::get_transform()[m[K’:
+[01m[K/home/loser/learning_ros2/chapt5/chapt5_ws/src/demo_cpp_tf/src/tf_listener.cpp:39:44:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%lld[m[K’ expects argument of type ‘[01m[Klong long int[m[K’, but argument 5 has type ‘[01m[Kgeometry_msgs::msg::Vector3_<std::allocator<void> >::_x_type[m[K’ {aka ‘[01m[Kdouble[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+   39 |             RCLCPP_INFO(this->get_logger(),[01;35m[K"平移:%lld,%lld,%lld,旋转:%f,%f,%f"[m[K,[32m[Ktranslation.x[m[K,translation.y,translation.z,r,p,y);
+      |                                            [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K [32m[K~~~~~~~~~~~~~[m[K
+      |                                                                                            [32m[K|[m[K
+      |                                                                                            [32m[Kgeometry_msgs::msg::Vector3_<std::allocator<void> >::_x_type {aka double}[m[K
+[01m[K/home/loser/learning_ros2/chapt5/chapt5_ws/src/demo_cpp_tf/src/tf_listener.cpp:39:53:[m[K [01;36m[Knote: [m[Kformat string is defined here
+   39 |             RCLCPP_INFO(this->get_logger(),"平移:[01;36m[K%lld[m[K,%lld,%lld,旋转:%f,%f,%f",translation.x,translation.y,translation.z,r,p,y);
+      |                                                  [01;36m[K~~~^[m[K
+      |                                                     [01;36m[K|[m[K
+      |                                                     [01;36m[Klong long int[m[K
+      |                                                  [32m[K%f[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/loser/learning_ros2/chapt5/chapt5_ws/src/demo_cpp_tf/src/tf_listener.cpp:1[m[K:
+[01m[K/home/loser/learning_ros2/chapt5/chapt5_ws/src/demo_cpp_tf/src/tf_listener.cpp:39:44:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%lld[m[K’ expects argument of type ‘[01m[Klong long int[m[K’, but argument 6 has type ‘[01m[Kgeometry_msgs::msg::Vector3_<std::allocator<void> >::_y_type[m[K’ {aka ‘[01m[Kdouble[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+   39 |             RCLCPP_INFO(this->get_logger(),[01;35m[K"平移:%lld,%lld,%lld,旋转:%f,%f,%f"[m[K,translation.x,[32m[Ktranslation.y[m[K,translation.z,r,p,y);
+      |                                            [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K               [32m[K~~~~~~~~~~~~~[m[K
+      |                                                                                                          [32m[K|[m[K
+      |                                                                                                          [32m[Kgeometry_msgs::msg::Vector3_<std::allocator<void> >::_y_type {aka double}[m[K
+[01m[K/home/loser/learning_ros2/chapt5/chapt5_ws/src/demo_cpp_tf/src/tf_listener.cpp:39:58:[m[K [01;36m[Knote: [m[Kformat string is defined here
+   39 |             RCLCPP_INFO(this->get_logger(),"平移:%lld,[01;36m[K%lld[m[K,%lld,旋转:%f,%f,%f",translation.x,translation.y,translation.z,r,p,y);
+      |                                                       [01;36m[K~~~^[m[K
+      |                                                          [01;36m[K|[m[K
+      |                                                          [01;36m[Klong long int[m[K
+      |                                                       [32m[K%f[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/loser/learning_ros2/chapt5/chapt5_ws/src/demo_cpp_tf/src/tf_listener.cpp:1[m[K:
+[01m[K/home/loser/learning_ros2/chapt5/chapt5_ws/src/demo_cpp_tf/src/tf_listener.cpp:39:44:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%lld[m[K’ expects argument of type ‘[01m[Klong long int[m[K’, but argument 7 has type ‘[01m[Kgeometry_msgs::msg::Vector3_<std::allocator<void> >::_z_type[m[K’ {aka ‘[01m[Kdouble[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+   39 |             RCLCPP_INFO(this->get_logger(),[01;35m[K"平移:%lld,%lld,%lld,旋转:%f,%f,%f"[m[K,translation.x,translation.y,[32m[Ktranslation.z[m[K,r,p,y);
+      |                                            [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K                             [32m[K~~~~~~~~~~~~~[m[K
+      |                                                                                                                        [32m[K|[m[K
+      |                                                                                                                        [32m[Kgeometry_msgs::msg::Vector3_<std::allocator<void> >::_z_type {aka double}[m[K
+[01m[K/home/loser/learning_ros2/chapt5/chapt5_ws/src/demo_cpp_tf/src/tf_listener.cpp:39:63:[m[K [01;36m[Knote: [m[Kformat string is defined here
+   39 |             RCLCPP_INFO(this->get_logger(),"平移:%lld,%lld,[01;36m[K%lld[m[K,旋转:%f,%f,%f",translation.x,translation.y,translation.z,r,p,y);
+      |                                                            [01;36m[K~~~^[m[K
+      |                                                               [01;36m[K|[m[K
+      |                                                               [01;36m[Klong long int[m[K
+      |                                                            [32m[K%f[m[K
