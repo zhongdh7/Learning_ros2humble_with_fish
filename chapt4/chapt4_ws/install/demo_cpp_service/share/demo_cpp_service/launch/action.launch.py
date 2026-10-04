@@ -1,33 +1,33 @@
-import os
-
-import launch
+import launch 
 import launch_ros
-from ament_index_python import get_package_share_directory
+
 def generate_launch_description():
-    #包含其他launch
-    mutisim_launch_path=os.path.join(
-        get_package_share_directory("turtlesim"),"launch","multisim.launch.py"
+
+    #先声明launch参数，然后把launch参数传入节点
+    #注意：default_value 必须是字符串，写 150（int）会报 'int' object is not iterable
+    action_declare_arg_bg=launch.actions.DeclareLaunchArgument("launch_arg_bg",default_value="150",description="修改小海龟的节点的背景g")
+
+    action_node_turtlesim=launch_ros.actions.Node(
+        package="turtlesim",
+        executable="turtlesim_node",
+        #用 LaunchConfiguration 拿到 launch 参数，再用 ParameterValue(value_type=int) 转成 int
+        parameters=[{"background_r":255}],
+        #Node 没有 log 参数，输出位置用 output
+        output="screen")
+    action_node_partol_client=launch_ros.actions.Node(
+        package="demo_cpp_service",
+        executable="patrol_client",
+        output="both"
     )
 
-    action_include_launch=launch.actions.IncludeLaunchDescription(
-        launch.launch_description_sources.PythonLaunchDescriptionSource(
-            mutisim_launch_path
-        )
+    action_node_turtle_control=launch_ros.actions.Node(
+        package="demo_cpp_service",
+        executable="turtle_control",
+        output="log"
     )
-
-    action_log_info=launch.actions.LogInfo(msg=mutisim_launch_path)
-
-    #执行一个命令行
-    action_topic_list=launch.actions.ExecuteProcess(
-        cmd=["ros2","topic","list"]
-    )
-
-    action_group=launch.actions.GroupAction([
-        launch.actions.TimerAction(period=2.0,actions=[action_include_launch]),
-        launch.actions.TimerAction(period=4.0,actions=[action_topic_list])
-    ])
-
     return launch.LaunchDescription([
-        action_log_info,
-        action_group
+        action_declare_arg_bg,
+        action_node_turtlesim,
+        action_node_turtle_control,
+        action_node_partol_client
     ])

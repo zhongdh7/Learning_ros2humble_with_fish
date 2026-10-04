@@ -11,7 +11,7 @@ def generate_launch_description():
 
     # 通过文件路径获取内容，并且转换成参数值的对象
     substitution_command_result=launch.substitutions.Command('cat',launch.substitutions.LaunchConfiguration("model"))
-    robot_description_value=aunch_ros.parameter_descriptions.ParameterValue(substitution_command_result,value_type=str)
+    robot_description_value=launch_ros.parameter_descriptions.ParameterValue(substitution_command_result,value_type=str)
 
     action_robot_state_publisher=launch_ros.actions.Node(
                             package="robot_state_publisher",executable="robot_state_publisher",
