@@ -1,3 +1,4 @@
+#动态坐标变换发布到/tf话题下面
 import rclpy
 from rclpy.node import Node
 from tf2_ros import TransformBroadcaster #坐标广播器
@@ -7,7 +8,7 @@ from tf_transformations import quaternion_from_euler #从欧拉角转换
 
 class TFBroadcast(Node):
     def __init__(self):
-        super().__init__("static_tf_broadcaster")
+        super().__init__("tf_broadcaster")
         self.broadcaster_=TransformBroadcaster(self)
         #动态坐标变换需要一直发布所以需要创建定时器
         self.timer_=self.create_timer(0.01,self.publish_tf)

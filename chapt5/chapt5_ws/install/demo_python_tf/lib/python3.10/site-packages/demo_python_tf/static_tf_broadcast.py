@@ -1,3 +1,4 @@
+#静态坐标变化发布到tf_static话题下面
 import rclpy
 from rclpy.node import Node
 from tf2_ros import StaticTransformBroadcaster #静态坐标广播器

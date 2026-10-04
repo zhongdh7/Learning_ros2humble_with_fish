@@ -1,0 +1,27 @@
+[0.323s] Invoking command in '/home/loser/learning_ros2/chapt5/chapt5_ws/src/demo_python_tf': PYTHONPATH=/home/loser/learning_ros2/chapt5/chapt5_ws/build/demo_python_tf/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/loser/learning_ros2/chapt5/chapt5_ws/install/demo_python_tf/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/demo_python_tf build --build-base /home/loser/learning_ros2/chapt5/chapt5_ws/build/demo_python_tf/build install --record /home/loser/learning_ros2/chapt5/chapt5_ws/build/demo_python_tf/install.log --install-scripts $base/lib/demo_python_tf --single-version-externally-managed install_data
+[0.444s] running egg_info
+[0.444s] writing ../../build/demo_python_tf/demo_python_tf.egg-info/PKG-INFO
+[0.444s] writing dependency_links to ../../build/demo_python_tf/demo_python_tf.egg-info/dependency_links.txt
+[0.444s] writing entry points to ../../build/demo_python_tf/demo_python_tf.egg-info/entry_points.txt
+[0.444s] writing requirements to ../../build/demo_python_tf/demo_python_tf.egg-info/requires.txt
+[0.444s] writing top-level names to ../../build/demo_python_tf/demo_python_tf.egg-info/top_level.txt
+[0.444s] reading manifest file '../../build/demo_python_tf/demo_python_tf.egg-info/SOURCES.txt'
+[0.444s] adding license file 'LICENSE'
+[0.444s] writing manifest file '../../build/demo_python_tf/demo_python_tf.egg-info/SOURCES.txt'
+[0.444s] running build
+[0.444s] running build_py
+[0.445s] copying demo_python_tf/tf_listener.py -> /home/loser/learning_ros2/chapt5/chapt5_ws/build/demo_python_tf/build/lib/demo_python_tf
+[0.445s] running install
+[0.445s] running install_lib
+[0.445s] copying /home/loser/learning_ros2/chapt5/chapt5_ws/build/demo_python_tf/build/lib/demo_python_tf/tf_listener.py -> /home/loser/learning_ros2/chapt5/chapt5_ws/install/demo_python_tf/lib/python3.10/site-packages/demo_python_tf
+[0.445s] byte-compiling /home/loser/learning_ros2/chapt5/chapt5_ws/install/demo_python_tf/lib/python3.10/site-packages/demo_python_tf/tf_listener.py to tf_listener.cpython-310.pyc
+[0.446s] running install_data
+[0.446s] running install_egg_info
+[0.447s] removing '/home/loser/learning_ros2/chapt5/chapt5_ws/install/demo_python_tf/lib/python3.10/site-packages/demo_python_tf-0.0.0-py3.10.egg-info' (and everything under it)
+[0.447s] Copying ../../build/demo_python_tf/demo_python_tf.egg-info to /home/loser/learning_ros2/chapt5/chapt5_ws/install/demo_python_tf/lib/python3.10/site-packages/demo_python_tf-0.0.0-py3.10.egg-info
+[0.447s] running install_scripts
+[0.460s] Installing dynamic_tf_broadcaster script to /home/loser/learning_ros2/chapt5/chapt5_ws/install/demo_python_tf/lib/demo_python_tf
+[0.460s] Installing static_tf_broadcast script to /home/loser/learning_ros2/chapt5/chapt5_ws/install/demo_python_tf/lib/demo_python_tf
+[0.460s] Installing tf_listener script to /home/loser/learning_ros2/chapt5/chapt5_ws/install/demo_python_tf/lib/demo_python_tf
+[0.460s] writing list of installed files to '/home/loser/learning_ros2/chapt5/chapt5_ws/build/demo_python_tf/install.log'
+[0.475s] Invoked command in '/home/loser/learning_ros2/chapt5/chapt5_ws/src/demo_python_tf' returned '0': PYTHONPATH=/home/loser/learning_ros2/chapt5/chapt5_ws/build/demo_python_tf/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/loser/learning_ros2/chapt5/chapt5_ws/install/demo_python_tf/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/demo_python_tf build --build-base /home/loser/learning_ros2/chapt5/chapt5_ws/build/demo_python_tf/build install --record /home/loser/learning_ros2/chapt5/chapt5_ws/build/demo_python_tf/install.log --install-scripts $base/lib/demo_python_tf --single-version-externally-managed install_data

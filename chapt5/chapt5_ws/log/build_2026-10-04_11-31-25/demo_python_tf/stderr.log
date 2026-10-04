@@ -1,0 +1,5 @@
+  File "/home/loser/learning_ros2/chapt5/chapt5_ws/install/demo_python_tf/lib/python3.10/site-packages/demo_python_tf/tf_listener.py", line 22
+    self.get_logger().info(f"平移:{transform_.translation},旋转{euler_from_quaternion([transform_.rotation.x,
+                           ^
+SyntaxError: unterminated string literal (detected at line 22)
+
