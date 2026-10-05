@@ -30,6 +30,8 @@ def generate_launch_description():
                             package="robot_state_publisher",executable="robot_state_publisher",
                             parameters=[{"robot_description":robot_description_value}])
 
+    # Gazebo 的 diff drive 插件已经在发布轮子 TF，这里再起一个假的 joint_state_publisher
+    # 会让同一个轮子 frame 出现两个父坐标系，RViz 解不出来就会把轮子渲染成白色。
     # joint_state_publisher=launch_ros.actions.Node(package="joint_state_publisher",executable="joint_state_publisher")
 
     rviz_action=launch_ros.actions.Node(package="rviz2",executable="rviz2",arguments=['-d',default_rviz_config_ros])
