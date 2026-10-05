@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
     <xacro:macro name="base_xacro" params="length radius">
+        <link name="base_foot_print"/>
         <link name="base_link">
             <visual>
                 <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
@@ -12,5 +13,11 @@
                 </material>
             </visual>
         </link>
+
+        <joint name="base_to_footprint_joint" type="fixed">
+            <origin xyz="0.0 0.0 ${length/2+0.032-0.001}" rpy="0.0 0.0 0.0"/>
+            <parent link="base_foot_print"/>
+            <child link="base_link"/>
+        </joint>
     </xacro:macro>
 </robot>
