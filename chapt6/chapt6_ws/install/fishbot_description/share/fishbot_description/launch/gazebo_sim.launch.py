@@ -30,7 +30,7 @@ def generate_launch_description():
                             package="robot_state_publisher",executable="robot_state_publisher",
                             parameters=[{"robot_description":robot_description_value}])
 
-    joint_state_publisher=launch_ros.actions.Node(package="joint_state_publisher",executable="joint_state_publisher")
+    # joint_state_publisher=launch_ros.actions.Node(package="joint_state_publisher",executable="joint_state_publisher")
 
     rviz_action=launch_ros.actions.Node(package="rviz2",executable="rviz2",arguments=['-d',default_rviz_config_ros])
 
@@ -48,7 +48,7 @@ def generate_launch_description():
     return launch.LaunchDescription([
         action_declare_arg_model_path,
         action_robot_state_publisher,
-        joint_state_publisher,
+        # joint_state_publisher,
         rviz_action,
         gazebo_launch_action,
         action_spawn_robot
