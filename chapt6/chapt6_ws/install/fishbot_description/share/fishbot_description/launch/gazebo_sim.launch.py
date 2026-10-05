@@ -53,5 +53,8 @@ def generate_launch_description():
         # joint_state_publisher,
         rviz_action,
         gazebo_launch_action,
-        action_spawn_robot
+        # gzserver 加载 custom_room.world 需要时间，spawn_entity 起太早会撞上
+        # Gazebo 内部 “entity to appear in simulation” 超时而退出。这里延迟 8s 错开。
+        # 注意：TimerAction 只是按时间错开，不代表 Gazebo 真的就绪（见下方说明）。
+        launch.actions.TimerAction(period=3.0, actions=[action_spawn_robot])
     ])
