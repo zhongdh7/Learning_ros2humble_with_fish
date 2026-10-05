@@ -14,7 +14,7 @@ def generate_launch_description():
     default_rviz_config_ros=os.path.join(get_package_share_directory("fishbot_description"),"config","fish_robot.rviz")
 
     # 通过文件路径获取内容，并且转换成参数值的对象
-    substitution_command_result=launch.substitutions.Command(['cat ',
+    substitution_command_result=launch.substitutions.Command(['xacro ',
                                                              launch.substitutions.LaunchConfiguration("model")])
     
     robot_description_value=launch_ros.parameter_descriptions.ParameterValue(substitution_command_result,
